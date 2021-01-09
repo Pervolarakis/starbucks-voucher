@@ -1,0 +1,38 @@
+#triangle {
+    width: 100%;
+    height: 100%;
+    background-color: #1E3932;
+    background-image: -webkit-linear-gradient(top, #194536, #077344);
+    background-size: cover;
+    
+    clip-path: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
+  }
+.over{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.backgrnd{
+  width: 100%; 
+  height: 800px; 
+  position: relative
+}
+
+
+
+  @media (max-width: 700px) {
+  
+    .over{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .backgrnd{
+      height: 1100px;
+    }
+  }

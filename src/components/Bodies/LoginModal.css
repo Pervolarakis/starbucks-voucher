@@ -1,0 +1,24 @@
+#loginModal .modal-content{
+    background-color: transparent !important;
+    color: white;
+    border: none !important;
+ }
+
+
+ #loginModal input::placeholder{
+     color: white
+ }
+
+ .modal-backdrop{
+    opacity:0.7 !important;
+}
+
+#loginModal button{
+    outline: none;
+    border: none;
+}
+
+.close {
+    color: white !important; 
+    opacity: 1;
+}

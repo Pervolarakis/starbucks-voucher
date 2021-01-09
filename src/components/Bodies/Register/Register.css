@@ -1,0 +1,26 @@
+#registerForm label{
+    font-size: 24;
+    font-weight: 600;
+}
+
+#registerForm input{
+    border: 1px solid #4A4A4A;
+}
+
+#registerForm input::placeholder{
+    color: #4A4A4A;
+    font-weight: 600;
+    
+}
+
+#registerForm button{
+    background-color: #008248;
+    color: white; 
+    height: 56px; 
+    width: 216px; 
+    font-weight: 600; 
+    font-size: 24; 
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #008248
+}

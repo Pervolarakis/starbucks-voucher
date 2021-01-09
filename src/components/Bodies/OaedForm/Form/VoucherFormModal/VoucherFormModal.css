@@ -1,0 +1,12 @@
+.voucherModalSuccess {
+    background-Color: #008248 !important; 
+    border: 20px solid #51AA71 !important;
+    color: white;
+    padding: 0px !important
+}
+
+.voucherModalFail {
+    background-Color: #C26363 !important; 
+    border: 20px solid #DF7F7F !important;
+    color: white
+}

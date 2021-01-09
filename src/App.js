@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/Nav/NavBar'
+import OaedForm from './components/Bodies/OaedForm/OaedForm'
+import Register from './components/Bodies/Register/Register'
+import RedeemCoupon from './components/Bodies/RedeemCoupon/RedeemCoupon'
+import AdminPage from './components/Bodies/AdminPage/AdminPage'
+import Footer from './components/Footer/Footer'
+import MainPage from './components/Bodies/MainPage/MainPage'
+import EndedOaedForm from './components/Bodies/EndedOaedForm/EndedOaedForm'
+import { Router, Route } from "react-router";
+import { createBrowserHistory } from "history";
+
 
 function App() {
+  const history = createBrowserHistory();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <div>
+        <NavBar/>
+        <Route exact path="/">
+          <MainPage/>
+        </Route>
+        <Route exact path="/ended">
+          <EndedOaedForm/>
+        </Route>
+        <Route exact path="/apply">
+          <OaedForm/>
+        </Route>
+        <Route exact path="/register">
+          <Register/>
+        </Route>
+        <Route exact path="/redeem">
+          <RedeemCoupon/>
+        </Route>
+        <Route exact path="/admin">
+          <AdminPage/>
+        </Route>
+        
+        
+      </div>
+      <Footer/>
+      
+    </Router>
   );
 }
 

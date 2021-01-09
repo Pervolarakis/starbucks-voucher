@@ -1,0 +1,11 @@
+.selectedPage {
+    border-bottom: 2px solid #006F42;
+}
+
+.navItem {
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #000000;
+    font-size: 16;
+    font-weight: 600;
+}
