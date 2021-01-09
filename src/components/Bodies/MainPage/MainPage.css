@@ -1,0 +1,11 @@
+@media (max-width: 700px) {
+  
+    #mainPage #container1{
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+    #mainPage #container2{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+      }
+  }

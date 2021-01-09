@@ -4,11 +4,11 @@
 }
 
 #registerForm input{
-    border: 1px solid #4A4A4A;
+    border: 1px solid #707070;
 }
 
 #registerForm input::placeholder{
-    color: #4A4A4A;
+    color: #707070;
     font-weight: 600;
     
 }

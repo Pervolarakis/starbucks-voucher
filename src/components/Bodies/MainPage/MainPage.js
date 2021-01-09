@@ -3,12 +3,14 @@ import drinks from '../../../Assets/drinks.png'
 import cards from '../../../Assets/cards.png'
 import {Col, Row} from 'react-bootstrap';
 import {whiteLogo} from '../../../Assets/svgs'
+import {Link} from 'react-router-dom'
+import './MainPage.css'
 
 const MainPage = props => {
     return(
-        <div style={{height: "100%"}}>
+        <div id="mainPage" style={{height: "100%"}}>
             <div style={{backgroundColor: "#006F42"}} >
-                <Row style={{marginLeft: "140px", marginRight: "140px", display: "flex", alignItems: "center"}}>
+                <Row id="container1" style={{marginLeft: "140px", marginRight: "140px", display: "flex", alignItems: "center"}}>
                     <Col md={8}>
                         <div style={{maxWidth: "800PX", marginTop: "64px", marginBottom: "64px"}}>
                             <p style={{fontSize: 56, fontWeight: 600, color: "white", letterSpacing: "-1px", marginBottom: "0px"}}>ΚΑΛΩΣ ΗΡΘΑΤΕ ΣΤΑ </p>
@@ -25,17 +27,19 @@ const MainPage = props => {
             
             </div>
             <div style={{backgroundColor: "#1E3932"}}>
-                <Row style={{marginLeft: "140px", marginRight: "240px", display: "flex", alignItems: "center"}}>
+                <Row id="container2" style={{marginLeft: "140px", marginRight: "240px", display: "flex", alignItems: "center"}}>
                     <Col md={8}>
                         <div style={{maxWidth: "800PX", marginTop: "64px", marginBottom: "64px"}}>
                             <p style={{fontSize: 56, fontWeight: 600, color: "#D2A04B", letterSpacing: "-1px"}}>ΚΛΗΡΩΣΗ! </p>
-                            <p style={{fontSize: 24, fontWeight: 600, color: "white", letterSpacing: "-1px", marginTop: "24px", marginBottom: "0px"}}>Η εταιρία μας σε συνεργασία με τον ΟΑΕΔ προσφέρει δωρεάν voucher σε 10.000 τυχερούς.</p>
+                            <p style={{fontSize: 24, fontWeight: 600, color: "white", letterSpacing: "-1px", marginTop: "24px", marginBottom: "0px"}}>Η εταιρία μας σε συνεργασία με τον ΟΑΕΔ προσφέρει<p style={{display: "inline", color: "#D2A04B"}}> δωρεάν voucher</p> σε <p style={{display: "inline", color: "#D2A04B"}}> 10.000</p> τυχερούς.</p>
                             <p style={{fontSize: 16, fontWeight: 600, color: "white"}}>*Η προσφορά ισχύει μέχρι 2/2/2021  </p>
-                            <button style={{marginTop: "24px", backgroundColor: "#D2A04B",  color: "1E3932", border: "none",  width: "300px", height: "104px", borderRadius: "5px", fontSize: 32, fontWeight: 600}}>ΚΑΝΤΕ ΑΙΤΗΣΗ!</button>
+                            <Link to="/apply">
+                                <button style={{marginTop: "24px", backgroundColor: "#D2A04B",  color: "1E3932", border: "none",  width: "300px", height: "104px", borderRadius: "5px", fontSize: 32, fontWeight: 600}}>ΚΑΝΤΕ ΑΙΤΗΣΗ!</button>
+                            </Link>
                         </div>
                     </Col>
                     <Col md={4}>
-                        <img alt="cards img" src={cards} width="550px" height="350px" style={{margin: "auto"}}/>
+                        <img alt="cards img" src={cards} width="400px" height="300px" style={{margin: "auto"}}/>
                     </Col>
                 </Row>
                 
