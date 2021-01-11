@@ -2,6 +2,7 @@ import React from 'react';
 import {Modal, Button} from 'react-bootstrap'
 import './RedeemModal.css'
 import {failed, success} from './RedeemModalSvgs'
+import pdfFile from '../../../../Assets/coupon.pdf'
 
 const RedeemModal = props => {
     return(
@@ -13,7 +14,8 @@ const RedeemModal = props => {
             <Modal.Title>{(props.success) ? "ΣΥΓΧΑΡΗΤΗΡΙΑ!" : "ΣΦΑΛΜΑ..."}</Modal.Title>
             {(props.success)? success : failed}
             {(props.success) ? "Ο κωδικός σου εξαργυρώθηκε με επιτυχία. Μπορείς να παραλάβεις το κουπόνι σου πατώντας το παρακάτω κουμπί!" : "Ο κωδικός που εισάγατε δεν είναι σωστός ή έχει χρησιμοποιηθεί ήδη. Παρακαλούμε βεβαιωθείτε ότι τον πληκτρολογήσατε σωστά."}
-            <Button id="redeemButton">{(props.success) ? "Παραλαβή κωδικού!": "Προσπαθήστε ξανά!"}</Button>
+            
+            <Button onClick={(props.success) ? () => window.open(pdfFile): props.handleClose} id="redeemButton">{(props.success) ? "Παραλαβή κωδικού!": "Προσπαθήστε ξανά!"}</Button>
           </Modal.Body>
           
         </Modal>

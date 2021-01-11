@@ -23,7 +23,7 @@ const NavBar = props => {
                         <NavLink className="navItem" activeClassName="selectedPage" exact to="/">Αρχική</NavLink>
                         <NavLink className="navItem" activeClassName="selectedPage" to="/apply">Αίτηση</NavLink>
                         <NavLink className="navItem" activeClassName="selectedPage" to="/redeem">Εξαργύρωση</NavLink>
-                        <NavLink className="navItem" activeClassName="selectedPage" to="/admin">Διαχείρηση</NavLink>
+                        <NavLink className="navItem" activeClassName="selectedPage" to="/admin">Διαχείριση</NavLink>
                     </Nav>
                     <button onClick={(event)=> {event.preventDefault(); handleShow()}} style={{height: "32px", width: "88px", padding: 0, backgroundColor: "white", border: "1px solid black", borderRadius: 25, fontSize: 14, fontWeight: 600, marginRight: "24px"}}>Σύνδεση</button>
                     <NavLink to="/register" style={{height: "32px", width: "88px", padding: 0, backgroundColor: "black", border: "1px solid black", borderRadius: 25, fontSize: 14, fontWeight: 600, color: "white", display: "flex", justifyContent: "center", alignItems: "center"}}>Εγγραφή</NavLink>

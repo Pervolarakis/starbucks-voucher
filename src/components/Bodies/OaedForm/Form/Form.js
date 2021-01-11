@@ -1,19 +1,32 @@
 import React,{useState} from 'react';
 import './Form.css'
 import VoucherFormModal from './VoucherFormModal/VoucherFormModal'
+import {Button, Form} from 'react-bootstrap'
 
-const Form = props => {
+const ApplyForm = props => {
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        event.target.className += " was-validated";
-        handleShow();
-    };
-
+    const [validated, setValidated] = useState(false);
     const [show, setShow] = useState(false);
+    const [serverRes, setServerRES] = useState(true);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        
+        event.preventDefault();
+        event.stopPropagation();
+        
+        
+        setValidated(true);
+        if (form.checkValidity() === true) {
+            handleShow()
+        }
+    };
+
+
+    
 
     return(
         <div className="card shadow-lg" style={{width: "100%"}}>
@@ -21,39 +34,48 @@ const Form = props => {
                 Συμπληρώστε την παρακάτω φόρμα για να αποκτήσετε το <p style={{color: "#006F42", display: "inline"}}>VOUCHER</p> σας.
             </div>
             <div className="card-body">
-                <form className="needs-validation" onSubmit={handleSubmit} noValidate>
-                    
-                    
-                    <div className="form-floating">
-                        <label htmlFor="floatingPassword">ΑΜΚΑ</label>
-                        <input type="text" className="form-control" id="amka" placeholder="ΑΜΚΑ" required/>
-                    </div>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                        
 
-                    <div className="form-floating">
-                        <label htmlFor="floatingPassword">ΑΦΜ</label>
-                        <input type="text"  className="form-control" id="afm" placeholder="ΑΦΜ" required/>
-                    </div>
-
-                    <div className="form-floating">
-                        <label htmlFor="floatingPassword">ΑΔΤ</label>
-                        <input type="text"  className="form-control" id="aft" placeholder="ΑΔΤ" required/>
-                    </div>
-
-                    <div className="form-floating">
-                        <label htmlFor="floatingPassword">ΚΩΔΙΚΟΣ ΚΑΡΤΑΣ ΑΝΕΡΓΙΑΣ</label>
-                        <input type="text"  className="form-control" id="kodikoskartas" placeholder="ΚΩΔΙΚΟΣ ΚΑΡΤΑΣ ΑΝΕΡΓΙΑΣ" required/>
-                    </div>
-                    
-                    <button className="form-button" color="primary" type="submit">
-                        ΥΠΟΒΟΛΗ
-                    </button>
-                </form>
+                        <Form.Row>
+                            <Form.Group md="12" style={{width: "100%"}} controlId="validationCustom03">
+                                <Form.Label>ΑΜΚΑ</Form.Label>
+                                <Form.Control type="text" placeholder="ΑΜΚΑ" required />
+                            </Form.Group>
+                        </Form.Row>
+                        <Form.Row>
+                            <Form.Group md="12" style={{width: "100%"}} controlId="validationCustom04">
+                                <Form.Label>ΑΦΜ</Form.Label>
+                                <Form.Control type="text" placeholder="ΑΦΜ" required />
+                            </Form.Group>
+                        </Form.Row>
+                        <Form.Row>
+                            <Form.Group md="12" style={{width: "100%"}} controlId="validationCustom05">
+                                <Form.Label>ΑΔΤ</Form.Label>
+                                <Form.Control type="text" placeholder="ΑΔΤ" required />
+                            </Form.Group>
+                        </Form.Row>
+                        <Form.Row>
+                            <Form.Group md="12" style={{width: "100%"}} controlId="validationCustom06">
+                                <Form.Label>ΚΩΔΙΚΟΣ ΚΑΡΤΑΣ ΑΝΕΡΓΙΑΣ</Form.Label>
+                                <Form.Control type="text" minLength="16" maxLength="16" placeholder="ΚΩΔΙΚΟΣ ΚΑΡΤΑΣ ΑΝΕΡΓΙΑΣ" required />
+                            </Form.Group>
+                        </Form.Row>
+                        <label>server response (for prototype only)</label>
+                        <select name="server res" id="cars" onChange={(e)=>{setServerRES(!serverRes)}}>
+                            <option value="true">success</option>
+                            <option value="false">fail</option>
+                        
+                        </select>
+                        <Button id="formButton" type="submit">ΥΠΟΒΟΛΗ</Button>
+                        
+                    </Form>
 
             </div>
-            <VoucherFormModal show={show} success={false} handleClose={handleClose}/>
+            <VoucherFormModal show={show} success={serverRes} handleClose={handleClose}/>
         </div>
         
     )
 }
 
-export default Form;
+export default ApplyForm;
