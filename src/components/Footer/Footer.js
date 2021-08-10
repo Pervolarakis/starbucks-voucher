@@ -15,11 +15,11 @@ const Footer = props => {
             </div>
 
             <div style={{display: "flex", flexDirection: "row", justifyContent: "flex-start", marginTop: "24px"}}>
-                <p className="footerNavItem">Privacy Policy</p>
-                <p className="footerNavItem">Terms of use</p>
-                <p className="footerNavItem">CA Support Chain Act</p>
-                <p className="footerNavItem">Submit Your Idea</p>
-                <p className="footerNavItem">Cookie Preferencies</p>
+                <p className="footerNavItem">Πολιτική απορρήτου</p>
+                <p className="footerNavItem">Όροι χρήσης</p>
+                <p className="footerNavItem">Στείλτε μας τις ιδέες σας</p>
+                <p className="footerNavItem">Προτιμήσεις Cookies</p>
+                
             </div>
             <p style={{marginTop: "8px", fontSize: 16, fontWeight: 600, color: "#707070"}}>© 2020 Starbucks Coffee Company. All rights reserved.</p>
 

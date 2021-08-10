@@ -21,12 +21,12 @@ const NavBar = props => {
                 <Navbar.Collapse id="basic-navbar-nav"style={{backgroundColor: "white", zIndex: 5}}>
                     <Nav className="mr-auto" >
                         <NavLink className="navItem" activeClassName="selectedPage" exact to="/">Αρχική</NavLink>
-                        <NavLink className="navItem" activeClassName="selectedPage" to="/apply">Voucher</NavLink>
-                        <NavLink className="navItem" activeClassName="selectedPage" to="/redeem">Redeem</NavLink>
-                        <NavLink className="navItem" activeClassName="selectedPage" to="/admin">Admin</NavLink>
+                        <NavLink className="navItem" activeClassName="selectedPage" to="/apply">Αίτηση</NavLink>
+                        <NavLink className="navItem" activeClassName="selectedPage" to="/redeem">Εξαργύρωση</NavLink>
+                        <NavLink className="navItem" activeClassName="selectedPage" to="/admin">Διαχείρηση</NavLink>
                     </Nav>
-                    <button onClick={(event)=> {event.preventDefault(); handleShow()}} style={{height: "32px", width: "88px", padding: 0, backgroundColor: "white", border: "1px solid black", borderRadius: 25, fontSize: 14, fontWeight: 600, marginRight: "24px"}}>Sign in</button>
-                    <NavLink to="/register" style={{height: "32px", width: "88px", padding: 0, backgroundColor: "black", border: "1px solid black", borderRadius: 25, fontSize: 14, fontWeight: 600, color: "white", display: "flex", justifyContent: "center", alignItems: "center"}}>Join now</NavLink>
+                    <button onClick={(event)=> {event.preventDefault(); handleShow()}} style={{height: "32px", width: "88px", padding: 0, backgroundColor: "white", border: "1px solid black", borderRadius: 25, fontSize: 14, fontWeight: 600, marginRight: "24px"}}>Σύνδεση</button>
+                    <NavLink to="/register" style={{height: "32px", width: "88px", padding: 0, backgroundColor: "black", border: "1px solid black", borderRadius: 25, fontSize: 14, fontWeight: 600, color: "white", display: "flex", justifyContent: "center", alignItems: "center"}}>Εγγραφή</NavLink>
                 </Navbar.Collapse>
             </Navbar>
             <LoginModal show={show} handleClose={() => handleClose()}/>

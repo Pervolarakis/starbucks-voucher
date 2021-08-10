@@ -5,7 +5,7 @@ import WinnersBoard from './WinnersBoard';
 
 const EndedOaedForm = props => {
     return(
-        <div>
+        <div id="endedoaedForm">
             <div className="shadow-lg" style={{height: "50px", backgroundColor: "#1E3932", paddingRight: "140px", paddingLeft: "140px", color: "white", fontSize: 24, fontWeight: "bold", display: "flex", alignItems: "center"}}>STARBUCKS COFFEE</div>
             <div className="backgrnd">
                 
@@ -13,8 +13,8 @@ const EndedOaedForm = props => {
                 <p style={{color: "white", fontSize: 16, fontWeight: 600, width: "500px"}}>ΣΑΣ ΕΥΧΑΡΙΣΤΟΥΜΕ ΓΙΑ ΤΗΝ ΣΥΜΕΤΟΧΗ ΣΑΣ.
                 ΤΑ ΟΝΟΜΑΤΑ ΤΩΝ ΝΙΚΗΤΩΝ ΕΧΟΥΝ ΑΝΑΚΟΙΝΩΘΕΙ
                 ΠΑΡΑΚΑΤΩ!</p>
-                <Card style={{width: "500px"}}>
-                    <Card.Header as="h5">ΝΙΚΗΤΕΣ</Card.Header>
+                <Card style={{width: "600px", borderRadius: 15, overflow: "hidden"}}>
+                    <Card.Header style={{backgroundColor: "white", textAlign: "center"}} as="h5">ΝΙΚΗΤΕΣ</Card.Header>
                     <Card.Body>
                         <div style={{display: "flex", justifyContent: "space-around"}}>
                             <p>ONOMA</p>

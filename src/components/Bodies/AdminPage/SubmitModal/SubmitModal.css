@@ -1,5 +1,6 @@
 #completeModal .modal-content{
-    background-color: #006F42 !important;
+    background-Color: #008248 !important; 
+    border: 20px solid #51AA71 !important;
     color: white;
-    width: 500px
+    padding: 0px !important
 }

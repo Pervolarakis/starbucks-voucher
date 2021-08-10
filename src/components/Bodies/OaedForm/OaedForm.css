@@ -1,4 +1,4 @@
-#triangle {
+#oaedForm #triangle {
     width: 100%;
     height: 100%;
     background-color: #1E3932;
@@ -7,7 +7,7 @@
     
     clip-path: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
   }
-.over{
+  #oaedForm .over{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -18,21 +18,31 @@
     padding-right: 140px;
 }
 
-.backgrnd{
+#oaedForm .backgrnd{
   width: 100%; 
   height: 800px; 
   position: relative
 }
 
 
+#oaedForm #txt{
+  font-Size: 36px; 
+  font-Weight: 600; 
+  color: white; 
+  display: block
+}
+
 
   @media (max-width: 700px) {
   
-    .over{
+    #oaedForm .over{
       padding-left: 0px;
       padding-right: 0px;
     }
-    .backgrnd{
+    #oaedForm .backgrnd{
       height: 1100px;
+    }
+    #oaedForm #txt{
+      color: #D2A04B
     }
   }
