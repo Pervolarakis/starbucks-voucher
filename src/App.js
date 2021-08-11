@@ -7,14 +7,15 @@ import AdminPage from './components/Bodies/AdminPage/AdminPage'
 import Footer from './components/Footer/Footer'
 import MainPage from './components/Bodies/MainPage/MainPage'
 import EndedOaedForm from './components/Bodies/EndedOaedForm/EndedOaedForm'
-import { Router, Route } from "react-router";
+import { HashRouter, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
 
 function App() {
   const history = createBrowserHistory();
   return (
-    <Router history={history}>
+    <HashRouter basename='/' history={history}>
+  
       <div>
         <NavBar/>
         <Route exact path="/">
@@ -40,7 +41,8 @@ function App() {
       </div>
       <Footer/>
       
-    </Router>
+    
+    </HashRouter>
   );
 }
 
