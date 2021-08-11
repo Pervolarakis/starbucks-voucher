@@ -7,6 +7,10 @@
     margin-Right: 24px
 }
 
+.footerStyle{
+    bottom: 0px;
+}
+
 .footerSocial{
     width: 40px; 
     height: 40px; 
